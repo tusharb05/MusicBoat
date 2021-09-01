@@ -137,11 +137,7 @@ client.on('message', (message)=>{
         }else if(cmd === "jump"){
             if(args.length == 0) return message.channel.send('Please provide a number to skip to.');
             player.clearQueue(message)
-            // try{
-            //     x
-            // }catch{
-            //     message.channel.send('Not playing any song currently.')
-            // }
+            
             
         }else if(cmd === "skip"){
             try{
@@ -185,13 +181,17 @@ client.on('message', (message)=>{
             
         }else if(cmd === "shuffle"){
             player.shuffle(message)
+            
         }else if(cmd === "showqueuebar"){
             message.channel.send(player.createProgressBar(message, {timecodes: true, queue: true}));
+            
         }else if(cmd === "showstats"){
             const showstats = require('./Commands/showstats')
             showstats(player, message, MessageEmbed);
+            
         }else if(cmd === "repeat"){
             player.setRepeatMode(message, true)
+            
         }
     }
 });
