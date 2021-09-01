@@ -12,7 +12,6 @@ const seek = require('./Commands/goto');
 
 const PREFIX = 'm!';
 
-// player.use('')
 const lyricsClient = Lyrics.init();
 
 client.player.on("trackStart", (message, track) => {
