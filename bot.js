@@ -182,6 +182,7 @@ client.on('message', (message)=>{
         }else if(cmd === "setvol"){
             let setvol = require('./Commands/setvolume')
             setvol(player, message, args[0])
+            
         }else if(cmd === "shuffle"){
             player.shuffle(message)
         }else if(cmd === "showqueuebar"){
