@@ -19,7 +19,7 @@ client.player.on("trackStart", (message, track) => {
 })
 
 const songs = [];
-// let titles = [];
+
 client.on('ready', ()=>console.log('logged in')); 
 
 
